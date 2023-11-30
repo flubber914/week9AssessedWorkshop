@@ -5,6 +5,7 @@ class Cow : public Animal
 {
 public:
 	virtual void speak(void);
+	static Cow& Create();
 	Cow();
 	virtual ~Cow();
 };

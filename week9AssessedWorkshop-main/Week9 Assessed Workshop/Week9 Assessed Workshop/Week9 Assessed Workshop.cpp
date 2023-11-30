@@ -28,30 +28,29 @@ int main()
     {
         for (int i = 0; i < numberOfObjects; i++)
         {
-            Animal* newAnimal;
+            Animal *newAnimal;
             int random = rand() % 3;
             switch (rand() % 3)
             {
             case 0:
             {
-                Sheep *sheep = new Sheep();
-                newAnimal = sheep;
+                Sheep sheep;
+                newAnimal = &sheep.Create();
             }
             break;
             case 1:
             {
-                Cow *cow = new Cow();
-                newAnimal = cow;
+                Cow cow;
+                newAnimal = &cow.Create();
             }
             break;
             case 2:
             {
-                Frisian *frisian = new Frisian();
-                newAnimal = frisian;
+                Frisian frisian;
+                newAnimal = &frisian.Create();
             }
             break;
             default:
-                cout << "this" << endl;
                 newAnimal = new Animal();
                 break;
             }
